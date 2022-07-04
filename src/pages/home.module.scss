@@ -1,0 +1,50 @@
+.Container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(100vh - 5rem);
+  max-width: 70rem;
+  margin: 0 auto;
+
+  article {
+    background-color: var(--gray-200);
+    border-radius: 9999px;
+
+    img {
+      border-radius: 9999px;
+    }
+  }
+}
+
+.Content {
+  > span {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    display: block;
+    margin-bottom: 2.5rem;
+  }
+
+  h1 {
+    font-weight: 900;
+    font-size: 4.5rem;
+    line-height: 4.5re;
+    color: var(--white-50);
+    margin-bottom: 1.5rem;
+
+    span {
+      color: var(--green-500);
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    color: var(--white-50);
+    margin-bottom: 2.5rem;
+    
+    span {
+      color: var(--green-500);
+    }
+  }
+}
