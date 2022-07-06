@@ -1,19 +1,28 @@
+import { signIn, signOut, useSession } from "next-auth/react";
 import { GithubLogo, X } from "phosphor-react";
 import styles from "./styles.module.scss";
 
 export function SignInButton() {
-  const isLogged = true;
+  const { data } = useSession();
 
-  return isLogged ? (
-    <button className={styles.Container}>
+  return data ? (
+    <button
+      type="button"
+      onClick={() => signOut()}
+      className={styles.Container}
+    >
       <GithubLogo size={22} color="#fba94c" />
-      Eric Macedo
+      {data.user?.name}
       <X size={22} color="#737380" className={styles.CloseButton} />
     </button>
   ) : (
-    <button>
+    <button
+      type="button"
+      onClick={() => signIn("github")}
+      className={styles.Container}
+    >
       <GithubLogo size={22} color="#f75a68" />
-      nada
+      Entre com o Github
     </button>
   );
 }

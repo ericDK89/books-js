@@ -1,0 +1,33 @@
+.booksContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+  background-color: var(--gray-800);
+  border: 1px solid var(--green-500);
+  border-radius: 4px;
+  padding: 0.5rem 0;
+  transition: all 0.2s;
+  height: 100%;
+
+  &:hover {
+    border: 1px solid var(--yellow-500);
+
+    strong {
+      color: var(--white-50);
+    }
+  }
+
+  img {
+    width: 11.25rem;
+    border-radius: 4px;
+  }
+
+  strong {
+    transition: all 0.2s;
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+    color: var(--gray-200);
+  }
+}

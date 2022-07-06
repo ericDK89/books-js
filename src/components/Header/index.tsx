@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from "next/link";
 import { SignInButton } from "../SignInButton";
 import styles from "./styles.module.scss";
 
@@ -6,11 +6,17 @@ export function Header() {
   return (
     <header className={styles.Container}>
       <div className={styles.Content}>
-        <Image src="/logo.png" alt="BooksJs" width={120} height={40} />
+        <strong>
+          books<span>.</span>Js
+        </strong>
 
         <nav>
-          <a href="#">Início</a>
-          <a href="#">Livros</a>
+          <Link href="/">
+            <a>Início</a>
+          </Link>
+          <Link href="/books">
+            <a>Livros</a>
+          </Link>
         </nav>
 
         <SignInButton />

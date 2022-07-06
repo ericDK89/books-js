@@ -11,6 +11,16 @@
   display: flex;
   align-items: center;
 
+  strong {
+    color: var(--green-500);
+    font-weight: bold;
+    font-size: 2rem;
+
+    span {
+      color: var(--white-50);
+    }
+  }
+
   nav {
     margin-left: 5rem;
     font-weight: 700;

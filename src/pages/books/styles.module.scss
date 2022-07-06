@@ -1,0 +1,8 @@
+.booksContainer {
+  max-width: 90vw;
+  width: 100%;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4rem;
+}
