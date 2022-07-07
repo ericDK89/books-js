@@ -1,0 +1,21 @@
+.slugBookTitle {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.slugBookContainer {
+  max-width: 70rem;
+  margin: 2rem auto 0;
+  border: 1px solid var(--gray-500);
+  border-radius: 4px;
+  padding: 1.5rem 2rem;
+
+  article {
+    font-size: 2rem;
+    line-height: 2.6rem;
+
+    & + article {
+      margin-top: 2rem;
+    }
+  }
+}

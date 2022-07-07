@@ -1,10 +1,10 @@
-.Container {
+.headerContainer {
   height: 5rem;
   border-bottom: 1px solid var(--gray-600);
   background-color: var(--gray-800);
 }
 
-.Content {
+.headerContent {
   max-width: 70rem;
   margin: 0 auto;
   height: 5rem;
@@ -27,19 +27,22 @@
     height: 5rem;
 
     a {
+      margin-left: 2rem;
       line-height: 5rem;
       transition: filter 0.2s;
       position: relative;
       display: inline-block;
 
+      &:first-child {
+        margin-left: 0;
+      }
+
       &:hover {
         filter: brightness(0.8);
       }
+    }
 
-      & + a {
-        margin-left: 2rem;
-      }
-
+    .activeLink {
       &::after {
         content: "";
         background-color: var(--green-500);

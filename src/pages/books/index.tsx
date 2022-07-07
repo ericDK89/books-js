@@ -1,5 +1,6 @@
 import { gql } from "@apollo/client";
 import { GetStaticProps } from "next";
+import Head from "next/head";
 import Book from "../../components/Book";
 import { client as apolloClient } from "../api/_lib/apollo";
 import styles from "./styles.module.scss";
@@ -16,9 +17,12 @@ export interface IBooks {
 }
 
 export default function Books({ booksJs }: IBooks) {
-
   return (
     <>
+      <Head>
+        <title>Books.Js | Livros</title>
+      </Head>
+
       <main className={styles.booksContainer}>
         <Book booksJs={booksJs} />
       </main>
