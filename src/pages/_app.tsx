@@ -5,7 +5,10 @@ import "../styles/global.scss";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <SessionProvider session={pageProps.session} basePath="https://books-js.vercel.app/">
+    <SessionProvider
+      session={pageProps.session}
+      basePath="https://books-js.vercel.app/api/auth"
+    >
       <Header />
       <Component {...pageProps} />
     </SessionProvider>
