@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Book.Js Documentation" src="https://user-images.githubusercontent.com/68076508/177856493-ddeea5de-be21-4914-88de-a3bb6dc6b1aa.mp4">
+  <video alt="Book.Js Documentation" src="https://user-images.githubusercontent.com/68076508/177856493-ddeea5de-be21-4914-88de-a3bb6dc6b1aa.mp4">
 </p>
 
 <br>
