@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "https://vercel.com/ericdk89/books-js/api",
+  baseURL: "https://books-js.vercel.app/api",
 });
