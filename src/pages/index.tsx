@@ -66,4 +66,4 @@ export const getStaticProps: GetStaticProps = async () => {
       product,
     },
   };
-};
+}
