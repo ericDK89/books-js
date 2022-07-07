@@ -15,6 +15,7 @@ export default NextAuth({
       },
     }),
   ],
+  secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
     async session({ session }) {
       try {
@@ -22,32 +23,31 @@ export default NextAuth({
           q.Get(
             q.Intersection([
               q.Match(
-                q.Index('subscription_by_user_ref'),
+                q.Index("subscription_by_user_ref"),
                 q.Select(
-                  'ref',
+                  "ref",
                   q.Get(
                     q.Match(
-                      q.Index('user_by_email'),
+                      q.Index("user_by_email"),
                       q.Casefold(session.user?.email as string)
                     )
                   )
                 )
               ),
-              q.Match(
-                q.Index('subscription_by_status'),
-                "active"
-              )
+              q.Match(q.Index("subscription_by_status"), "active"),
             ])
           )
-        )
+        );
 
         return {
-          ...session, activeSubscription: useActiveSubscription
-        }
+          ...session,
+          activeSubscription: useActiveSubscription,
+        };
       } catch {
         return {
-          ...session, activeSubscription: null
-        }
+          ...session,
+          activeSubscription: null,
+        };
       }
     },
 
